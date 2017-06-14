@@ -31,13 +31,13 @@ class PhotoMosaic_Lightbox_Bridge_Ilightbox {
         if ( !class_exists('PhotoMosaic') ) {
             $this->oops();
         } else {
-            // wp_enqueue_script(
-            //     $this->plugin_name,
-            //     plugins_url('/'. $this->plugin_name .'.js', __FILE__ ),
-            //     array( $photomosaic->get_plugin_name() . '-localize' ),
-            //     $this->version,
-            //     true
-            // );
+            wp_enqueue_script(
+                $this->plugin_name,
+                plugins_url('/'. $this->plugin_name .'.js', __FILE__ ),
+                array( $photomosaic->get_plugin_name() . '-localize' ),
+                $this->version,
+                true
+            );
 
             // $photomosaic->localize(
             //     $photomosaic->get_plugin_name() . '-localize',
